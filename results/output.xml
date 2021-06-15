@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210614 21:58:01.034" rpa="false" schemaversion="2">
+<suite id="s1" name="Teste Variabeis" source="C:\Users\TAKA\Documents\Docs - Thiago\Cursos\PrimeExpert\prime_experts_jun2021\teste_variabeis.robot">
+<test id="s1-t1" name="Meu teste de impressão de mensagem no terminal">
+<kw name="Logar no meu terminal uma mensagem">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.073" endtime="20210614 21:58:01.073"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${MENSAGEM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.073" endtime="20210614 21:58:01.074"/>
+</kw>
+<status status="PASS" starttime="20210614 21:58:01.072" endtime="20210614 21:58:01.074"/>
+</kw>
+<status status="PASS" starttime="20210614 21:58:01.071" endtime="20210614 21:58:01.074"/>
+</test>
+<test id="s1-t2" name="Meu teste de impressão de um dicionario de PESSOA">
+<kw name="Logar no meu terminal uma PESSOA">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.076" endtime="20210614 21:58:01.077"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PESSOA}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.077" endtime="20210614 21:58:01.077"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.077" endtime="20210614 21:58:01.078"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PESSOA.nome}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.078" endtime="20210614 21:58:01.079"/>
+</kw>
+<status status="PASS" starttime="20210614 21:58:01.076" endtime="20210614 21:58:01.079"/>
+</kw>
+<status status="PASS" starttime="20210614 21:58:01.076" endtime="20210614 21:58:01.079"/>
+</test>
+<test id="s1-t3" name="Meu teste imprimindo uma lista de FRUTAS">
+<kw name="Logar no meu terminal uma lista">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.081" endtime="20210614 21:58:01.082"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${FRUTAS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.082" endtime="20210614 21:58:01.082"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${FRUTAS[2]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210614 21:58:01.082" endtime="20210614 21:58:01.083"/>
+</kw>
+<status status="PASS" starttime="20210614 21:58:01.081" endtime="20210614 21:58:01.084"/>
+</kw>
+<status status="PASS" starttime="20210614 21:58:01.081" endtime="20210614 21:58:01.084"/>
+</test>
+<doc>Meu teste de variaveis</doc>
+<status status="PASS" starttime="20210614 21:58:01.037" endtime="20210614 21:58:01.085"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Teste Variabeis">Teste Variabeis</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
