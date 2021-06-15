@@ -48,3 +48,4 @@ Logar no meu terminal uma lista
     Log to console    ${FRUTAS[3]}
     Log To Console    \n
     Log to console    ${FRUTAS[4]}
+1
