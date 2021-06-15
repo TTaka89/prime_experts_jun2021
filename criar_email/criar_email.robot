@@ -13,6 +13,6 @@ Criar um email com nome e sobrenome
 *** Keywords ***
 Criar e-mail com nome
     [Arguments]   ${NOME}  ${SOBRENOME}  ${IDADE}
-    [Return]    ${NOME}${SOBRENOME}${IDADE}@robot.com
+    [Return]    ${NOME}_${SOBRENOME}_${IDADE}@robot.com
 
 
