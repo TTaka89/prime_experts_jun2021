@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210616 19:32:18.826" rpa="false" schemaversion="2">
+<suite id="s1" name="suiteWebTesting" source="C:\Users\TAKA\Documents\Docs - Thiago\Cursos\PrimeExpert\prime_experts_jun2021\web_testing\suiteWebTesting.robot">
+<kw name="Abrir o navegador" library="resourceWebTesting" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210616 19:32:19.148" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210616 19:32:19.148" endtime="20210616 19:32:20.878"/>
+</kw>
+<status status="PASS" starttime="20210616 19:32:19.147" endtime="20210616 19:32:20.879"/>
+</kw>
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
+<kw name="Acessar a página home do site Automation Practice" library="resourceWebTesting">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210616 19:32:20.884" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210616 19:32:20.884" endtime="20210616 19:32:27.416"/>
+</kw>
+<status status="PASS" starttime="20210616 19:32:20.883" endtime="20210616 19:32:27.416"/>
+</kw>
+<status status="PASS" starttime="20210616 19:32:20.879" endtime="20210616 19:32:27.417"/>
+</test>
+<kw name="Fechar o navegador" library="resourceWebTesting" type="TEARDOWN">
+<msg timestamp="20210616 19:32:27.423" level="FAIL">User keyword 'Fechar o navegador' contains no keywords.</msg>
+<status status="FAIL" starttime="20210616 19:32:27.422" endtime="20210616 19:32:27.423">User keyword 'Fechar o navegador' contains no keywords.</status>
+</kw>
+<doc>Suite de testes WEB - Site: htt://automationpractice.com</doc>
+<status status="FAIL" starttime="20210616 19:32:18.829" endtime="20210616 19:32:27.423">Suite teardown failed:
+User keyword 'Fechar o navegador' contains no keywords.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="suiteWebTesting">suiteWebTesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
