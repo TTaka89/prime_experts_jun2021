@@ -18,15 +18,16 @@ Fechar o navegador
 ## ---- STEPS
 Acessar a página home do site Automation Practice
     Go To    ${URL}
-    Wait Until Element Is Visible    locator
+    Wait Until Element Is Visible    xpath=//img[contains(@class,'logo img-responsive')]
 
 Digitar o nome do produto "${PRODUTO}" no campo pesquisar
-
-
+    Input Text     xpath=//input[@class='search_query form-control ac_input'][contains(@id,'top')]    ${PRODUTO}
 
 Clicar no botão pesquisar
+    Click Button    name=submit_search
+    
+Conferir se o produto "${PRODUTO}" foi listado na pesquisa
+    Wait Until Element Is Visible    xpath=//img[contains(@alt,'Blouse')]
 
-
-
-Conferir se o produto "Blouse" foi listado na pesquisa
+    
     
