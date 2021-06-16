@@ -10,3 +10,5 @@ Caso de Teste 01: Pesquisar produto existente
     Digitar o nome do produto "Blouse" no campo pesquisar
     Clicar no botão pesquisar
     Conferir se o produto "Blouse" foi listado na pesquisa
+    Adcionar o produto "Blouse" no carrinho
+    Conferir se o produto "Blouse" foi adicionado no carrinho

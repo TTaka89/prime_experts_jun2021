@@ -29,5 +29,11 @@ Clicar no botão pesquisar
 Conferir se o produto "${PRODUTO}" foi listado na pesquisa
     Wait Until Element Is Visible    xpath=//img[contains(@alt,'Blouse')]
 
-    
+Adcionar o produto "${PRODUTO}" no carrinho
+    Wait Until Element Is Visible    xpath=//span[contains(.,'Add to cart')]
+    Click Button    xpath=//span[contains(.,'Add to cart')]
+    Wait Until Element Is Visible    xpath=//span[contains(.,'Proceed to checkout')]
+    Click Element    xpath=//span[contains(.,'Proceed to checkout')]
+
+Conferir se o produto "Blouse" foi adicionado no carrinho
     
