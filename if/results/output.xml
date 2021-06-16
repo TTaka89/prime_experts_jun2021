@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210615 21:41:32.167" rpa="false" schemaversion="2">
+<suite id="s1" name="If Exercicio" source="C:\Users\TAKA\Documents\Docs - Thiago\Cursos\PrimeExpert\prime_experts_jun2021\if\if_exercicio.robot">
+<test id="s1-t1" name="Teste exercício de For e IFs">
+<kw name="Imprimir apenas 5 ou 8 em 0 a 10" sourcename="Imprimir apenas 5 ou 8 em ${A} a ${B}">
+<for flavor="IN RANGE">
+<var>${NUM}</var>
+<value>${A}</value>
+<value>${B}+1</value>
+<iter>
+<var name="${NUM}">0</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.207"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.206" endtime="20210615 21:41:32.207"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.206" endtime="20210615 21:41:32.207"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.206" endtime="20210615 21:41:32.207"/>
+</iter>
+<iter>
+<var name="${NUM}">1</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.207"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.207"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.207"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.207"/>
+</iter>
+<iter>
+<var name="${NUM}">2</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.208"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.208"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.208"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.207" endtime="20210615 21:41:32.208"/>
+</iter>
+<iter>
+<var name="${NUM}">3</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.208"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.208"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.208"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.208"/>
+</iter>
+<iter>
+<var name="${NUM}">4</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.209" endtime="20210615 21:41:32.209"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.209" endtime="20210615 21:41:32.209"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.209"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.208" endtime="20210615 21:41:32.209"/>
+</iter>
+<iter>
+<var name="${NUM}">5</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210615 21:41:32.209" endtime="20210615 21:41:32.210"/>
+</kw>
+<status status="PASS" starttime="20210615 21:41:32.209" endtime="20210615 21:41:32.210"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.209" endtime="20210615 21:41:32.210"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.209" endtime="20210615 21:41:32.210"/>
+</iter>
+<iter>
+<var name="${NUM}">6</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.210" endtime="20210615 21:41:32.210"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.210" endtime="20210615 21:41:32.210"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.210" endtime="20210615 21:41:32.210"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.210" endtime="20210615 21:41:32.210"/>
+</iter>
+<iter>
+<var name="${NUM}">7</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.211" endtime="20210615 21:41:32.211"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.211" endtime="20210615 21:41:32.211"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.210" endtime="20210615 21:41:32.211"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.210" endtime="20210615 21:41:32.211"/>
+</iter>
+<iter>
+<var name="${NUM}">8</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210615 21:41:32.211" endtime="20210615 21:41:32.212"/>
+</kw>
+<status status="PASS" starttime="20210615 21:41:32.211" endtime="20210615 21:41:32.212"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.211" endtime="20210615 21:41:32.212"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.211" endtime="20210615 21:41:32.212"/>
+</iter>
+<iter>
+<var name="${NUM}">9</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.212" endtime="20210615 21:41:32.212"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.212" endtime="20210615 21:41:32.212"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.212" endtime="20210615 21:41:32.212"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.212" endtime="20210615 21:41:32.212"/>
+</iter>
+<iter>
+<var name="${NUM}">10</var>
+<if>
+<branch type="IF" condition="${NUM} in (5,8)">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}Estou no número: ${NUM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210615 21:41:32.213" endtime="20210615 21:41:32.213"/>
+</kw>
+<status status="NOT RUN" starttime="20210615 21:41:32.213" endtime="20210615 21:41:32.213"/>
+</branch>
+<status status="PASS" starttime="20210615 21:41:32.213" endtime="20210615 21:41:32.213"/>
+</if>
+<status status="PASS" starttime="20210615 21:41:32.213" endtime="20210615 21:41:32.213"/>
+</iter>
+<status status="PASS" starttime="20210615 21:41:32.205" endtime="20210615 21:41:32.213"/>
+</for>
+<status status="PASS" starttime="20210615 21:41:32.205" endtime="20210615 21:41:32.213"/>
+</kw>
+<status status="PASS" starttime="20210615 21:41:32.204" endtime="20210615 21:41:32.214"/>
+</test>
+<doc>Exercício de IF's - Tomada de decisões</doc>
+<status status="PASS" starttime="20210615 21:41:32.169" endtime="20210615 21:41:32.216"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="If Exercicio">If Exercicio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
