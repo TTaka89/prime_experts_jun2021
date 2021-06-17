@@ -35,5 +35,16 @@ Adcionar o produto "${PRODUTO}" no carrinho
     Wait Until Element Is Visible    xpath=//span[contains(.,'Proceed to checkout')]
     Click Element    xpath=//span[contains(.,'Proceed to checkout')]
 
-Conferir se o produto "Blouse" foi adicionado no carrinho
+Conferir se o produto "${PRODUTO}" foi adicionado no carrinho
+    Wait Until Element Is Visible    xpath=(//a[contains(.,'${PRODUTO}')])[4]
+
+Digitar o nome do produto "${PRODUTO}" no campo de pesquisa
+    Input Text     xpath=//input[@class='search_query form-control ac_input'][contains(@id,'top')]    ${PRODUTO}
+
+Conferir mensagem "${MENSAGEM}"
+    Wait Until Element Is Visible    //p[@class='alert alert-warning']
+    Element Should Contain    xpath=//p[@class='alert alert-warning']    ${MENSAGEM}    
+    
+
+
     

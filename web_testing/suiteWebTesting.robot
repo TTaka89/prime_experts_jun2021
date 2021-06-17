@@ -5,19 +5,20 @@ Suite Setup      Abrir o navegador
 Suite Teardown   Fechar o navegador
 
 *** Test Cases ***
-Caso de Teste 01: Pesquisar produto existente
-    Acessar a página home do site Automation Practice
-    Digitar o nome do produto "Blouse" no campo pesquisar
-    Clicar no botão pesquisar
-    Conferir se o produto "Blouse" foi listado na pesquisa
-    Adcionar o produto "Blouse" no carrinho
-    # Conferir se o produto "Blouse" foi adicionado no carrinho
-
-# Caso de Teste 02: Pesquisar produto não existente
+# Caso de Teste 01: Pesquisar produto existente
 #     Acessar a página home do site Automation Practice
-#     Digitar o nome do produto "itemNãoExistente" no campo de pesquisa
+#     Digitar o nome do produto "Blouse" no campo pesquisar
 #     Clicar no botão pesquisar
-#     Conferir mensagem "No results were found for your search "itemNãoExistente""
+#     Conferir se o produto "Blouse" foi listado na pesquisa
+#     Adcionar o produto "Blouse" no carrinho
+#     Conferir se o produto "Blouse" foi adicionado no carrinho
+
+Caso de Teste 02: Pesquisar produto não existente
+    Acessar a página home do site Automation Practice
+    Digitar o nome do produto "MELANCIA" no campo de pesquisa
+    Clicar no botão pesquisar
+    Conferir mensagem "No results were found for your search "MELANCIA""
+
 # Caso de Teste 03: Listar Produtos
 #     Acessar a página home do site
 #     Passar o mouse por cima da categoria "Women" no menu principal superior de categorias

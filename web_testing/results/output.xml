@@ -1,90 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210616 20:31:42.433" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210616 20:59:41.593" rpa="false" schemaversion="2">
 <suite id="s1" name="suiteWebTesting" source="C:\Users\TAKA\Documents\Docs - Thiago\Cursos\PrimeExpert\prime_experts_jun2021\web_testing\suiteWebTesting.robot">
 <kw name="Abrir o navegador" library="resourceWebTesting" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210616 20:31:42.744" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20210616 20:31:42.743" endtime="20210616 20:31:44.859"/>
+<msg timestamp="20210616 20:59:41.924" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210616 20:59:41.924" endtime="20210616 20:59:43.843"/>
 </kw>
-<status status="PASS" starttime="20210616 20:31:42.743" endtime="20210616 20:31:44.860"/>
+<status status="PASS" starttime="20210616 20:59:41.923" endtime="20210616 20:59:43.844"/>
 </kw>
-<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
+<test id="s1-t1" name="Caso de Teste 02: Pesquisar produto não existente">
 <kw name="Acessar a página home do site Automation Practice" library="resourceWebTesting">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210616 20:31:44.870" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" starttime="20210616 20:31:44.869" endtime="20210616 20:31:52.613"/>
+<msg timestamp="20210616 20:59:43.863" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210616 20:59:43.859" endtime="20210616 20:59:49.619"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//img[contains(@class,'logo img-responsive')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210616 20:31:52.613" endtime="20210616 20:31:52.653"/>
+<status status="PASS" starttime="20210616 20:59:49.620" endtime="20210616 20:59:49.653"/>
 </kw>
-<status status="PASS" starttime="20210616 20:31:44.868" endtime="20210616 20:31:52.653"/>
+<status status="PASS" starttime="20210616 20:59:43.849" endtime="20210616 20:59:49.653"/>
 </kw>
-<kw name="Digitar o nome do produto &quot;Blouse&quot; no campo pesquisar" library="resourceWebTesting" sourcename="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo pesquisar">
+<kw name="Digitar o nome do produto &quot;MELANCIA&quot; no campo de pesquisa" library="resourceWebTesting" sourcename="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo de pesquisa">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[@class='search_query form-control ac_input'][contains(@id,'top')]</arg>
 <arg>${PRODUTO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210616 20:31:52.655" level="INFO">Typing text 'Blouse' into text field 'xpath=//input[@class='search_query form-control ac_input'][contains(@id,'top')]'.</msg>
-<status status="PASS" starttime="20210616 20:31:52.654" endtime="20210616 20:31:53.067"/>
+<msg timestamp="20210616 20:59:49.654" level="INFO">Typing text 'MELANCIA' into text field 'xpath=//input[@class='search_query form-control ac_input'][contains(@id,'top')]'.</msg>
+<status status="PASS" starttime="20210616 20:59:49.654" endtime="20210616 20:59:49.809"/>
 </kw>
-<status status="PASS" starttime="20210616 20:31:52.654" endtime="20210616 20:31:53.068"/>
+<status status="PASS" starttime="20210616 20:59:49.653" endtime="20210616 20:59:49.810"/>
 </kw>
 <kw name="Clicar no botão pesquisar" library="resourceWebTesting">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>name=submit_search</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210616 20:31:53.079" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" starttime="20210616 20:31:53.079" endtime="20210616 20:31:54.324"/>
+<msg timestamp="20210616 20:59:49.818" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" starttime="20210616 20:59:49.818" endtime="20210616 20:59:52.902"/>
 </kw>
-<status status="PASS" starttime="20210616 20:31:53.078" endtime="20210616 20:31:54.325"/>
+<status status="PASS" starttime="20210616 20:59:49.817" endtime="20210616 20:59:52.903"/>
 </kw>
-<kw name="Conferir se o produto &quot;Blouse&quot; foi listado na pesquisa" library="resourceWebTesting" sourcename="Conferir se o produto &quot;${PRODUTO}&quot; foi listado na pesquisa">
+<kw name="Conferir mensagem &quot;No results were found for your search &quot;MELANCIA&quot;&quot;" library="resourceWebTesting" sourcename="Conferir mensagem &quot;${MENSAGEM}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//img[contains(@alt,'Blouse')]</arg>
+<arg>//p[@class='alert alert-warning']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210616 20:31:54.326" endtime="20210616 20:31:54.915"/>
+<status status="PASS" starttime="20210616 20:59:52.904" endtime="20210616 20:59:53.457"/>
 </kw>
-<status status="PASS" starttime="20210616 20:31:54.325" endtime="20210616 20:31:54.916"/>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//p[@class='alert alert-warning']</arg>
+<arg>${MENSAGEM}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210616 20:59:53.484" level="INFO">Element 'xpath=//p[@class='alert alert-warning']' contains text 'No results were found for your search "MELANCIA"'.</msg>
+<status status="PASS" starttime="20210616 20:59:53.457" endtime="20210616 20:59:53.484"/>
 </kw>
-<kw name="Adcionar o produto &quot;Blouse&quot; no carrinho" library="resourceWebTesting" sourcename="Adcionar o produto &quot;${PRODUTO}&quot; no carrinho">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//span[contains(.,'Add to cart')]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210616 20:31:54.917" endtime="20210616 20:31:54.942"/>
+<status status="PASS" starttime="20210616 20:59:52.904" endtime="20210616 20:59:53.485"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//span[contains(.,'Add to cart')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210616 20:31:54.943" level="INFO">Clicking element 'xpath=//span[contains(.,'Add to cart')]'.</msg>
-<status status="PASS" starttime="20210616 20:31:54.942" endtime="20210616 20:31:55.054"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//span[contains(.,'Proceed to checkout')]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210616 20:31:55.055" endtime="20210616 20:31:56.601"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//span[contains(.,'Proceed to checkout')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210616 20:31:56.602" level="INFO">Clicking element 'xpath=//span[contains(.,'Proceed to checkout')]'.</msg>
-<status status="PASS" starttime="20210616 20:31:56.601" endtime="20210616 20:32:01.280"/>
-</kw>
-<status status="PASS" starttime="20210616 20:31:54.916" endtime="20210616 20:32:01.280"/>
-</kw>
-<status status="PASS" starttime="20210616 20:31:44.860" endtime="20210616 20:32:01.281"/>
+<status status="PASS" starttime="20210616 20:59:43.844" endtime="20210616 20:59:53.485"/>
 </test>
 <kw name="Fechar o navegador" library="resourceWebTesting" type="TEARDOWN">
-<msg timestamp="20210616 20:32:01.283" level="FAIL">User keyword 'Fechar o navegador' contains no keywords.</msg>
-<status status="FAIL" starttime="20210616 20:32:01.283" endtime="20210616 20:32:01.284">User keyword 'Fechar o navegador' contains no keywords.</status>
+<msg timestamp="20210616 20:59:53.487" level="FAIL">User keyword 'Fechar o navegador' contains no keywords.</msg>
+<status status="FAIL" starttime="20210616 20:59:53.486" endtime="20210616 20:59:53.487">User keyword 'Fechar o navegador' contains no keywords.</status>
 </kw>
 <doc>Suite de testes WEB - Site: htt://automationpractice.com</doc>
-<status status="FAIL" starttime="20210616 20:31:42.436" endtime="20210616 20:32:01.284">Suite teardown failed:
+<status status="FAIL" starttime="20210616 20:59:41.596" endtime="20210616 20:59:53.487">Suite teardown failed:
 User keyword 'Fechar o navegador' contains no keywords.</status>
 </suite>
 <statistics>
