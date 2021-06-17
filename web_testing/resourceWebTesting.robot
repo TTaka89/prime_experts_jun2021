@@ -16,7 +16,7 @@ Fechar o navegador
 #    Close Browser
 
 ## ---- STEPS
-Acessar a página home do site Automation Practice
+Acessar a página home do site
     Go To    ${URL}
     Wait Until Element Is Visible    xpath=//img[contains(@class,'logo img-responsive')]
 
@@ -45,6 +45,11 @@ Conferir mensagem "${MENSAGEM}"
     Wait Until Element Is Visible    //p[@class='alert alert-warning']
     Element Should Contain    xpath=//p[@class='alert alert-warning']    ${MENSAGEM}    
     
+Passar o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias
+    Mouse Over    title=Women
 
+Clicar na sub categoria "${SUBCATEGORIA}"
+    
 
+Conferir se os produtos da sub-categoria "${SUBCATEGORIA}" foram mostrados na página
     
