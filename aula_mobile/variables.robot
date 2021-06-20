@@ -18,7 +18,7 @@ ${PLAYLISTS}                   accessibility_id=Playlists
 ${CHOOSE_E3}                   //android.widget.TextView[@text='E3 2021'] 
 ${NAVIGATEUP_BTN}              accessibility_id=Navigate up
 ${HOME_BTN}                    accessibility_id=Home
-${TRENDING_BTN}                accessibility_id=Explore
+${TRENDING_BTN}                accessibility_id=Trending
 ${SUBSCRIPTIONS_BTN}           accessibility_id=Subscriptions
 ${NOTIFICATION_BTN}            accessibility_id=Notifications
 
