@@ -4,7 +4,10 @@ Library              SeleniumLibrary
 Library              String
 
 *** Variables ***
-${URL}      http://automationpractice.com/index.php
+${URL}       http://automationpractice.com/index.php
+${NAME}      Thiago
+${LASTMANE}  Taka
+
 
 *** Keywords ***
 ## ---- SETUP
@@ -13,7 +16,7 @@ Abrir o navegador
 
 ## ---- TEARDOWN
 Fechar o navegador
-#    Close Browser
+    Close Browser
 
 ## ---- STEPS
 Acessar a página home do site
@@ -69,11 +72,11 @@ Clicar em "Criar conta"
 Preencher os dados obrigatórios
     Sleep    2s
     Click Element                   xpath=//label[@for='id_gender1'][contains(.,'Mr.')]
-    Input Text                      name=customer_firstname  Thiago
-    Input Text                      name=customer_lastname   dos Santos
+    Input Text                      name=customer_firstname  ${NAME}
+    Input Text                      name=customer_lastname   ${LASTMANE}
     Input Text                      name=passwd              11111
-    Input Text                      name=firstname           Tabaete
-    Input Text                      name=lastname            tabaete2
+    Input Text                      name=firstname           ${NAME}
+    Input Text                      name=lastname            ${LASTMANE}
     Input Text                      name=address1            Rua teste
     Input Text                      name=city                New York
     Select From List By Value       name=id_state            32
@@ -82,6 +85,8 @@ Preencher os dados obrigatórios
     Input Text                      name=phone_mobile        9999999
 
 Submeter cadastro
-    Click Element    xpath=//span[contains(.,'Register')]
+    Click Element                    xpath=//span[contains(.,'Register')]
+    
+Conferir se o cadastro foi efetuado com sucesso
+    Element Text Should Be          xpath=//h1[contains(.,'My account')]  MY ACCOUNT
     Element Text Should Be          //*[@id="center_column"]/p[@class="info-account"]   Welcome to your account. Here you can manage all of your personal information and orders.
-
