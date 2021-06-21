@@ -84,3 +84,4 @@ Preencher os dados obrigatórios
 Submeter cadastro
     Click Element    xpath=//span[contains(.,'Register')]
     Element Text Should Be          //*[@id="center_column"]/p[@class="info-account"]   Welcome to your account. Here you can manage all of your personal information and orders.
+

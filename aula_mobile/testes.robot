@@ -25,7 +25,7 @@ Search For
     Wait Until Page Contains Element        ${INPUT_SEARCH}
     Input Text                              ${INPUT_SEARCH}        ${content}
     Press Keycode                           66
-    Sleep                                   5s
+    Sleep    
     Wait Until Page Contains Element        ${CHANNEL_NAME}
     Click Element                           ${CHANNEL_NAME}
  
