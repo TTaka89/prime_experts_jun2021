@@ -29,12 +29,15 @@ ${NOTIFICATION_BTN}            accessibility_id=Notifications
 ${ACCOUNT_BTN}                 accessibility_id=Account
 ${SINGIN_BTN}                  id=com.google.android.youtube:id/button
 ${SINGIN_BTN2}                 id=com.google.android.youtube:id/name  
-${LOGINGOOGLE}                 xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View
-${NEXTNAME_BTN}                id=identifierNext
-${PRESSPASSWORD}               xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[2]/android.view.View
-${NEXTPASS_BTN}                id=passwordNext
-${SKIP_BTN}                    xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[6]/android.view.View/android.widget.Button
-        
+${LOGINGOOGLE}                 xpath=//android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View
+${LOGINGOOGLE2}                xpath=//android.view.View/android.view.View[1]/android.view.View[1]/android.widget.EditText
+${NEXTNAME_BTN}                xpath=//android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[4]/android.view.View
+${PRESSPASSWORD}               xpath=//android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.widget.EditText
+${NEXTPASS_BTN}                xpath=//android.view.View[4]/android.view.View/android.widget.Button
+${AGREE_BTN}                   xpath=//android.view.View[4]/android.view.View/android.widget.Button
+${BAKUP_NO}                    xpath=//android.widget.Switch
+${AGREE_BTN2}                  xpath=//android.widget.LinearLayout/android.widget.Button     
+${10THVIDEO}                   xpath=//android.view.ViewGroup[@content-desc="Sodium metal is soft and squishy - 38 seconds - Go to channel - NileRed Shorts - 2.4M views - 2 days ago - play video"]
 
 *** Keywords ***
 Open Youtube
@@ -43,43 +46,73 @@ Open Youtube
     ...                                          automationName=${AUTOMATION_NAME}
     Wait Until Page Contains Element             ${BANNER_ICON}    20
 
+
+Search For
+    [Arguments]                             ${content}
+    Wait Until Page Contains Element        ${BTN_SEARCH}
+    Click Element                           ${BTN_SEARCH}
+    Wait Until Page Contains Element        ${INPUT_SEARCH}
+    Input Text                              ${INPUT_SEARCH}        ${content}
+    Press Keycode                           66
+    Sleep                                   5s
+    Wait Until Page Contains Element        ${CHANNEL_NAME}
+    Click Element                           ${CHANNEL_NAME}
+
+Select Playlist Menu
+    Wait Until Page Contains Element        ${PLAYLISTS}
+    Click Element                           ${PLAYLISTS}
+    Wait Until Page Contains Element        ${CHOOSE_E3}
+    Click Element                           ${CHOOSE_E3}
+ 
+Navigate Menus
+    Click Element                           ${HOME_BTN}
+    Click Element                           ${TRENDING_BTN}
+    Click Element                           ${SUBSCRIPTIONS_BTN}
+    Click Element                           ${NOTIFICATION_BTN}
+
+Navigate Trending
+    Click Element                           ${TRENDING_BTN}
+    Sleep    2S
+
+Swipe until the tenth item on screen
+    Sleep    2s
+    Swipe    530    1060    550    110  
+    Sleep    1s
+    Swipe    530    1060    550    110  
+    Sleep    1s
+    Swipe    530    1060    550    110  
+    Sleep    1s
+    Swipe    530    1060    550    110  
+    Sleep    1s
+    Swipe    530    1060    550    110 
+    Sleep    1s
+    Swipe    530    1060    550    110 
+    Sleep    1s
+
+Select the tenth video
+    Click Element                             ${10THVIDEO} 
+
 Logging on the app with account
     Click Element                             ${ACCOUNT_BTN}                
-    Wait Until Page Contains Element          ${SINGIN_BTN}   80ms
+    Wait Until Page Contains Element          ${SINGIN_BTN}   5s
     Click Element                             ${SINGIN_BTN}
-    Sleep                                     5s
-    # Wait Until Page Contains Element          ${SINGIN_BTN2}  100ms
+    Sleep                                     5s              #SLEEP DEVIDO O ATRASO DE RESPOSTA DO EMULATOR
     Click Element                             ${SINGIN_BTN2}
-    Sleep                                     15s
+    Sleep                                     25s
     Click Element                             ${LOGINGOOGLE}
-    Input Text                                ${LOGINGOOGLE}   thiagotestemobile@gmail.com
-    Click Element                             ${NEXTNAME_BTN_BTN}
-    Wait Until Page Contains Element          ${PRESSPASSWORD}   10s
-    Click Element                             ${PRESSPASSWORD}
-    Input Text                                ${PRESSPASSWORD}   @Testemobile01
-    Wait Until Page Contains Element          ${SKIP_BTN}    10s
-    Click Element                             ${SKIP_BTN}
-
-# Search For
-#     [Arguments]                             ${content}
-#     Wait Until Page Contains Element        ${BTN_SEARCH}
-#     Click Element                           ${BTN_SEARCH}
-#     Wait Until Page Contains Element        ${INPUT_SEARCH}
-#     Input Text                              ${INPUT_SEARCH}        ${content}
-#     Press Keycode                           66
-#     Sleep                                   5s
-#     Wait Until Page Contains Element        ${CHANNEL_NAME}
-#     Click Element                           ${CHANNEL_NAME}
-
-# Select Playlist Menu
-#     Wait Until Page Contains Element        ${PLAYLISTS}
-#     Click Element                           ${PLAYLISTS}
-#     Wait Until Page Contains Element        ${CHOOSE_E3}
-#     Click Element                           ${CHOOSE_E3}
- 
-# Navigate Menus
-#     Click Element                           ${HOME_BTN}
-#     Click Element                           ${TRENDING_BTN}
-#     Click Element                           ${SUBSCRIPTIONS_BTN}
-#     Click Element                           ${NOTIFICATION_BTN}
+    Sleep                                     3s
+    Input Text                                ${LOGINGOOGLE2}     thiagotestemobile@gmail.com
+    Hide Keyboard
+    Click Element                             ${NEXTNAME_BTN}
+    Sleep                                     10s
+    Input Text                                ${PRESSPASSWORD}    @Testemobile01
+    Hide Keyboard
+    Click Element                             ${NEXTPASS_BTN}
+    Sleep                                     10s
+    Click Element                             ${AGREE_BTN}
+    Sleep                                     12s
+    Click Element                             ${BAKUP_NO}
+    Swipe                                     500     1010    581    133
+    Sleep                                     2s
+    Click Element                             ${AGREE_BTN2}
 
