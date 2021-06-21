@@ -58,6 +58,15 @@ Conferir se os produtos da sub-categoria "${SUBCATEGORIA}" foram mostrados na p�
     Wait Until Element Is Visible   xpath=//span[@class='cat-name']
     Element Should Contain          xpath=//span[@class='category-name']    ${SUBCATEGORIA}
 
+Clicar no ícone carrinho de compras
+    Click Element                   xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
+    Page Should Contain Element     xpath=//*[@id="cart_title"][contains(text(),"Shopping-cart summary")]
+    Page Should Contain Element     xpath=//*[@id="cart_summary"]/thead/tr/th[1]
+    Page Should Contain Element     xpath=//*[@id="cart_summary"]/thead/tr/th[2]
+
+Clicar no botão de remoção de produtos do carrinho
+    Click Element                   xpath=//a[@title='Delete']
+
 Clicar em "Sign in"
     Click Element    xpath=//a[@class='login']
 
@@ -70,7 +79,7 @@ Clicar em "Criar conta"
     Click Element    xpath=//span[contains(.,'Create an account')]
 
 Preencher os dados obrigatórios
-    Sleep    2s
+    Sleep                           4s
     Click Element                   xpath=//label[@for='id_gender1'][contains(.,'Mr.')]
     Input Text                      name=customer_firstname  ${NAME}
     Input Text                      name=customer_lastname   ${LASTMANE}
@@ -88,5 +97,7 @@ Submeter cadastro
     Click Element                    xpath=//span[contains(.,'Register')]
     
 Conferir se o cadastro foi efetuado com sucesso
+    Sleep                           5s
+    Wait Until Element Is Visible   xpath=//h1[contains(.,'My account')]
     Element Text Should Be          xpath=//h1[contains(.,'My account')]  MY ACCOUNT
     Element Text Should Be          //*[@id="center_column"]/p[@class="info-account"]   Welcome to your account. Here you can manage all of your personal information and orders.
